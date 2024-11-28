@@ -3,7 +3,7 @@ package String;
 import java.util.Scanner;
 
 /*
-특정 문자 뒤집기
+5. 특정 문자 뒤집기
 
 [설명]
 영어 알파벳과 특수문자로 구성된 문자열이 주어지면 영어 알파벳만 뒤집고,
