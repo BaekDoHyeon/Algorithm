@@ -31,12 +31,12 @@ public class 대소문자변환 {
 
         for (char c : charArray) {
             if(Character.isLowerCase(c))
-                sb.append((char)(c - 32));
+                sb.append((char)(c - 32)); //이 방법 말고 toUpperCase(c)를 사용 하여 대 문자로 변경 해도 가능!
             else
                 sb.append((char)(c + 32));
         }
 
-        System.out.println(sb.toString());
+        System.out.println(sb);
 
     }
 }
