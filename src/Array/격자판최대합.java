@@ -29,12 +29,12 @@ public class 격자판최대합 {
                 board[i][j] = sc.nextInt();
 
         int max = 0;
-        int diagonalScore = 0; //대각선
-        int reDiagonalScore = 0; //역대각선
+        int diagonalScore = 0; //대각선의 합
+        int reDiagonalScore = 0; //역대각선의 합
 
         for (int i = 0; i < size; i++) {
-            int rowScore = 0; // 가로 합
-            int colScore = 0; // 세로 합
+            int rowScore = 0; // 가로 합(행의 합)
+            int colScore = 0; // 세로 합(열의 합)
 
             for (int j = 0; j < size; j++) {
                 rowScore += board[i][j];
