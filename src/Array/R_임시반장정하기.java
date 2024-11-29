@@ -40,7 +40,7 @@ public class R_임시반장정하기 {
             for (int s = 0; s < cnt-1; s++) { //student(OO번 학생)
                 for (int j = s+1; j < cnt; j++) { //row(s학생과 j학생을 비교)
                     if (board[s][i] == board[j][i]) {
-                        if (check[s][j] == 0 ) {
+                        if (check[s][j] == 0 ) { //s학생이 j학생과 같은반을 한 적이 없다면...
                             check[s][j]++;
                             check[j][s]++;
                             students[s]++;
