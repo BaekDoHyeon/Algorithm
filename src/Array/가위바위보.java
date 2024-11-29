@@ -36,6 +36,9 @@ public class 가위바위보 {
             b[i] = sc.nextInt();
 
         for (int i = 0; i < cnt; i++) {
+
+            // 문제 풀이 1. -> 내가 혼자 푼 풀이.
+            /*
             if (a[i] == 1) {
                 if (b[i] == 2) System.out.println("B");
                 else if (b[i] == 3) System.out.println("A");
@@ -49,6 +52,14 @@ public class 가위바위보 {
                 else if (b[i] == 3) System.out.println("D");
                 else System.out.println("B");
             }
+            */
+
+            //문제 풀이 2. -> A가 이기는 상황면 else if 문제 작성하여 코드 수 줄이기
+            if (a[i] == b[i]) System.out.println("D");
+            else if (a[i] == 1 && b[i] == 3) System.out.println("A");
+            else if (a[i] == 2 && b[i] == 1) System.out.println("A");
+            else if (a[i] == 3 && b[i] == 2) System.out.println("A");
+            else System.out.println("B");
         }
     }
 }
