@@ -22,7 +22,7 @@ import java.util.Stack;
 [힌트]
 출처 : 한국정보올림피아드
  */
-public class 쇠막대기 {
+public class R_쇠막대기 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
