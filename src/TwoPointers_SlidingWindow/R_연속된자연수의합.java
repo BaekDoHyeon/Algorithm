@@ -25,8 +25,11 @@ N입력으로 양의 정수 N이 입력되면 2개 이상의 연속된 자연수
 [예시 출력]
 3
  */
-public class 연속된자연수의합 {
+public class R_연속된자연수의합 {
     public static void main(String[] args) {
+
+        // 문제 풀이 1 => 투 포인터로 문제 풀이
+        /*
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
@@ -51,5 +54,22 @@ public class 연속된자연수의합 {
         }
 
         System.out.println(cnt);
+        */
+
+        //문제 풀이 2 => 수학 관점으로 문제 풀이 해보기..
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        int result = 0, cnt = 1;
+        n--;
+
+        while (n > 0) {
+            cnt++;
+            n = n - cnt;
+            if (n % cnt == 0) result++;
+        }
+
+        System.out.println(result);
     }
 }
