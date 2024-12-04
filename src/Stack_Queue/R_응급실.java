@@ -47,6 +47,7 @@ class Person {
         this.priority = priority;
     }
 }
+
 public class R_응급실 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -76,6 +77,5 @@ public class R_응급실 {
         }
 
         System.out.println(cnt);
-
     }
 }
