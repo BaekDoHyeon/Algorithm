@@ -3,11 +3,11 @@ package SortingAndSearching;
 import java.util.Scanner;
 
 /*
-1. 선택 정렬
+2. 버블 정렬
 
 [설명]
 N개이 숫자가 입력되면 오름차순으로 정렬하여 출력하는 프로그램을 작성하세요.
-정렬하는 방법은 선택정렬입니다.
+정렬하는 방법은 버블 정렬입니다.
 
 [입력]
 첫 번째 줄에 자연수 N(1<=N<=100)이 주어집니다.
@@ -23,7 +23,7 @@ N개이 숫자가 입력되면 오름차순으로 정렬하여 출력하는 프�
 [예시 출력]
 5 7 11 13 15 23
  */
-public class 선택정렬 {
+public class 버블정렬 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -34,15 +34,13 @@ public class 선택정렬 {
             arr[i] = sc.nextInt();
 
         for (int i = 0; i < n-1; i++) {
-            int tmp = 0;
-            int minIdx = i;
-            for (int j = i+1; j < n; j++) {
-                if (arr[j] < arr[minIdx])
-                    minIdx = j;
+            for (int j = 0; j < n-1; j++) {
+                if (arr[j] > arr[j+1]) {
+                    int tmp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = tmp;
+                }
             }
-            tmp = arr[i];
-            arr[i] = arr[minIdx];
-            arr[minIdx] = tmp;
         }
 
         for (int i : arr)
