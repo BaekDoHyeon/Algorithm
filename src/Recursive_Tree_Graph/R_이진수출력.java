@@ -21,7 +21,7 @@ import java.util.Scanner;
 1011
 
  */
-public class 이진수출력 {
+public class R_이진수출력 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
