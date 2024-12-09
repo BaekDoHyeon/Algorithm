@@ -28,7 +28,7 @@ import java.util.Scanner;
 3 2
 3 3
  */
-public class 중복순열 {
+public class R_중복순열 {
 
     static int N, M;
     static int[] pm;
