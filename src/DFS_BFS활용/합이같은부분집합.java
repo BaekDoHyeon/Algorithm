@@ -53,12 +53,9 @@ public class 합이같은부분집합 {
 
     public static void DFS(int n) {
         int sum = Arrays.stream(resultArr).sum();
-        if (sum == target) {
-            result = "YES";
-            return;
-        } else if(sum < target) {
-            if (n >= N) return;
-            else {
+        if (sum == target) result = "YES";
+        else if(sum < target) {
+            if (n < N) {
                 resultArr[n] = arr[n];
                 DFS(n+1);
                 resultArr[n] = 0;
