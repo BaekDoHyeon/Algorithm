@@ -1,5 +1,7 @@
 package GreedyAlgorithm;
 
+import java.util.*;
+
 /*
 // 자세한 내용은 README.md 참고
 
@@ -31,8 +33,52 @@ package GreedyAlgorithm;
 [예시 출력]
 196
  */
-public class R_원더랜드2 {
-    public static void main(String[] args) {
+class Road2 implements Comparable<Road2> {
+    int v;
+    int cost;
 
+    Road2(int v, int cost) {
+        this.v = v;
+        this.cost = cost;
+    }
+
+    @Override
+    public int compareTo(Road2 o) {
+        return this.cost - o.cost;
+    }
+}
+public class R_원더랜드2 {
+    static int result = 0;
+    static int[] ch;
+    static List<List<Road2>> graph = new ArrayList<>();
+    static Queue<Road2> pq = new PriorityQueue<>();
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int V = sc.nextInt();
+        int E = sc.nextInt();
+        ch = new int[V+1];
+        for (int i  = 0; i <= V; i++) graph.add(new ArrayList<>());
+        for (int i = 0; i < E; i++) {
+            int v1 = sc.nextInt();
+            int v2 = sc.nextInt();
+            int cost = sc.nextInt();
+            graph.get(v1).add(new Road2(v2, cost));
+            graph.get(v2).add(new Road2(v1, cost));
+        }
+
+        pq.add(new Road2(1, 0));
+        while(!pq.isEmpty()) {
+            Road2 cur = pq.poll();
+            if (ch[cur.v] == 0)  {
+                result += cur.cost;
+                ch[cur.v] = 1;
+            }
+
+            for (Road2 r : graph.get(cur.v))
+                if (ch[r.v] == 0) pq.add(new Road2(r.v, r.cost));
+        }
+
+        System.out.println(result);
     }
 }

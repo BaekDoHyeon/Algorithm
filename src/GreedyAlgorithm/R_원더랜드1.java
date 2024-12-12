@@ -69,9 +69,8 @@ public class R_원더랜드1 {
             roads.add(new Road(v1, v2, cost));
         }
         Collections.sort(roads);
-        for (Road road : roads) {
-            Union(road);
-        }
+
+        for (Road road : roads) Union(road);
 
         System.out.println(result);
     }
