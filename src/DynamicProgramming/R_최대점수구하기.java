@@ -1,5 +1,9 @@
 package DynamicProgramming;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 /*
 6. 최대점수 구하기(냅색 알고리즘)
 [설명]
@@ -26,8 +30,38 @@ package DynamicProgramming;
 [예시 출력]
 41
  */
+class Exam {
+    int score;
+    int time;
+
+    Exam(int score, int time) {
+        this.score = score;
+        this.time = time;
+    }
+}
 public class R_최대점수구하기 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+
+        List<Exam> exams =  new ArrayList<>();
+        int[] arr = new int[m+1];
+
+        for (int i = 0; i < n; i++) {
+            int score = sc.nextInt();
+            int time = sc.nextInt();
+            exams.add(new Exam(score, time));
+        }
+
+        for (int i = 0; i < n; i++) {
+            for (int j = m; j >= exams.get(i).time; j--) {
+                //arr[j] = arr[j - exams.get(i).time] + exams.get(i).score;
+                arr[j] = Math.max(arr[j], arr[j - exams.get(i).time] + exams.get(i).score);
+            }
+        }
+
+        System.out.println(arr[m]);
     }
 }
