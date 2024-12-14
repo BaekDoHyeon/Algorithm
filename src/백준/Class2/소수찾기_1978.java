@@ -1,10 +1,10 @@
-import java.io.IOException;
+package 백준.Class2;
+
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) throws IOException {
+public class 소수찾기_1978 {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        StringBuilder sb = new StringBuilder();
 
         int N = sc.nextInt();
         int[] arr = new int[N];
