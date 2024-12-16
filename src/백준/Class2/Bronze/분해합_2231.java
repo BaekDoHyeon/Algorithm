@@ -1,8 +1,11 @@
-package 백준.Class2;
+package 백준.Class2.Bronze;
 
 import java.util.Scanner;
 
 /*
+// 브루트포스 알고리즘
+=> 브루트포스(Brute Force) 알고리즘은 문제를 해결하기 위해 가능한 모든 경우의 수를 탐색하는 기법입니다. 가장 단순하고 직관적인 방법이지만, 효율성은 낮을 수 있습니다.
+
 [예제 입력]
 216
 

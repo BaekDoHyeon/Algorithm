@@ -1,4 +1,4 @@
-package 백준.Class2;
+package 백준.Class2.Bronze;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
